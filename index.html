@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Etch-a-Sketch</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Cabin Sketch' rel='stylesheet'>
+    </head>
+    <body>
+        <script src="script.js" defer></script>
+        <div id="header">
+            <div id="title">Etch-a-Sketch</div>
+        </div>
+        <div id="middle">
+            <div id="left-column">
+                <button id="button" onclick="changeToBlack()">Black</button>
+                <button id="button" onclick="changeToRainbow()">Rainbow Mode</button>
+                <button id="button" onclick="changeToEraser()">Eraser</button>
+                <button id="button" onclick="resetGrid()">Reset Grid</button>
+                <div id="slide-container">
+                    <input type="range" min="1" max="64" value="32" class="slider" id="actualRange">
+                    <div id="current-size"></div>
+                </div>
+            </div>
+            <div id="grid"></div>
+            <div id="right-column"></div>
+        </div>
+        <div id="footer">Copyright © 2022 Tyler Tran</div>
+    </body>
+</html>
