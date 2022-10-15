@@ -112,6 +112,12 @@ body {
     border-radius: 5px;
     border: 1px solid black;
     color: black;
+    font-weight: bold;
+}
+
+#current-size {
+    color: black;
+    font-weight: bold;
 }
 
 #footer {
