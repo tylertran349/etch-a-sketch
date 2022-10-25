@@ -1,17 +1,26 @@
 const grid = document.querySelector('#grid');
-let color = "black";
+let color = "custom";
 let gridSquareSize;
 
-function changeToBlack() {
-    color = "black";
+function changeToColorMode() {
+    color = "custom";
+    document.querySelector('.custom').setAttribute('style', 'background-color: black; color: #87f2bf;'); // Invert button color when pressed
+    document.querySelector('.rainbow').setAttribute('style', 'background-color: transparent;  color: black;'); // Revert colors of other buttons when pressed
+    document.querySelector('.eraser').setAttribute('style', 'background-color: transparent;  color: black;'); // Revert colors of other buttons when pressed
 }
 
 function changeToRainbow() {
     color = "rainbow";
+    document.querySelector('.rainbow').setAttribute('style', 'background-color: black;  color: #87f0c1;'); // Invert button color when pressed
+    document.querySelector('.custom').setAttribute('style', 'background-color: transparent;  color: black;'); // Revert colors of other buttons when pressed
+    document.querySelector('.eraser').setAttribute('style', 'background-color: transparent;  color: black;'); // Revert colors of other buttons when pressed
 }
 
 function changeToEraser() {
     color = "eraser";
+    document.querySelector('.eraser').setAttribute('style', 'background-color: black;  color: #88eec6;'); // Invert button color when pressed
+    document.querySelector('.custom').setAttribute('style', 'background-color: transparent;  color: black;'); // Revert colors of other buttons when pressed
+    document.querySelector('.rainbow').setAttribute('style', 'background-color: transparent;  color: black;'); // Revert colors of other buttons when pressed
 }
 
 // Generate random RGB color parameter between 0 to 255
@@ -56,16 +65,15 @@ function deleteGrid() {
     });
 }
 
-// Attach event listeners to each grid square that make a square black if hovered over
+// Attach event listeners to each grid square that make a square custom if hovered over
 function attachListeners() {
     squares = document.querySelectorAll('.grid-square');
     squares.forEach((square) => {
         square.addEventListener('mouseover', () => {
             console.log('Hovered');
-            if(color == "black") {
-                square.style.background = 'black';
-            } 
-            else if(color == "rainbow") {
+            if(color == "custom") {
+                square.style.background = document.getElementById("color-picker").value; // Sets grid square color to be current color selected in the color picker
+            } else if(color == "rainbow") {
                 square.style.background = '#' + randomColorParameter().toString(16) + randomColorParameter().toString(16) + randomColorParameter().toString(16);
             } else if(color == "eraser") {
                 square.style.background = 'white';
