@@ -117,6 +117,11 @@ body {
     box-shadow: 0 1px 6px rgb(0 0 0 / 0.7);
 }
 
+#button.custom {
+    background-color: black;
+    color: #87f2bf;
+}
+
 #current-size {
     color: black;
     font-weight: 550;
