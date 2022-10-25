@@ -129,3 +129,7 @@ body {
     font-size: 18px;
     padding-bottom: 8px;
 }
+
+#button:active {
+    background: #00000079;
+}
