@@ -49,7 +49,7 @@ function generateGrid(gridSideLength) {
 }
 
 // Generate default grid on page load
-generateGrid(16);
+generateGrid(48);
 
 // Get a nodelist of all grid squares
 squares = document.querySelectorAll('.grid-square');
