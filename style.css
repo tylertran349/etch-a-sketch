@@ -171,3 +171,15 @@ body {
     border: none;
     box-shadow: 0 1px 6px rgb(0 0 0 / 0.7);
 }
+
+/* GitHub footer icon styling */
+.fa-github {
+    color: black;
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+  
+/* GitHub footer icon animation on hover */
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
