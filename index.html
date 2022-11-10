@@ -14,14 +14,16 @@
         </div>
         <div id="middle">
             <div id="left-column">
-                <input type="color" id="color-picker">
-                <button id="button" class="custom" onclick="changeToColorMode()">Custom Color</button>
-                <button id="button" class="rainbow" onclick="changeToRainbow()">Rainbow Mode</button>
-                <button id="button" class="eraser" onclick="changeToEraser()">Eraser</button>
-                <button id="button" class="reset" onclick="resetGrid()">Reset Grid</button>
-                <div id="slide-container">
-                    <input type="range" min="1" max="96" value="48" class="slider" id="actualRange">
-                    <div id="current-size"></div>
+                <div id="inputs">
+                    <input type="color" id="color-picker">
+                    <button id="button" class="custom" onclick="changeToColorMode()">Custom Color</button>
+                    <button id="button" class="rainbow" onclick="changeToRainbow()">Rainbow Mode</button>
+                    <button id="button" class="eraser" onclick="changeToEraser()">Eraser</button>
+                    <button id="button" class="reset" onclick="resetGrid()">Reset Grid</button>
+                    <div id="slide-container">
+                        <input type="range" min="1" max="96" value="48" class="slider" id="actualRange">
+                        <div id="current-size"></div>
+                    </div>
                 </div>
             </div>
             <div id="grid"></div>
