@@ -29,7 +29,7 @@ function randomColorParameter() {
 }
 
 function generateGrid(gridSideLength) {
-    gridSquareSize = 768 / gridSideLength;
+    gridSquareSize = grid.offsetWidth / gridSideLength;
     // Create columns
     for(let i = 0; i < gridSideLength; i++) {
         gridColumn = document.createElement('div');
