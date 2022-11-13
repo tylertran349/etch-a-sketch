@@ -47,7 +47,7 @@ function generateGrid(numGridSquares) {
         }
     }
 }
-
+ 
 // Generate default grid on page load
 generateGrid(48);
 
