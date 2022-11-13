@@ -28,16 +28,16 @@ function randomColorParameter() {
     return Math.floor(Math.random() * (255 - 0) + 0);
 }
 
-function generateGrid(gridSideLength) {
-    gridSquareSize = grid.offsetWidth / gridSideLength;
+function generateGrid(numGridSquares) {
+    gridSquareSize = grid.clientWidth / numGridSquares;
     // Create columns
-    for(let i = 0; i < gridSideLength; i++) {
+    for(let i = 0; i < numGridSquares; i++) {
         gridColumn = document.createElement('div');
         gridColumn.classList.add('grid-column');
         grid.appendChild(gridColumn);
     
         // Create individual grid squares
-        for(let i = 0; i < gridSideLength; i++) {
+        for(let i = 0; i < numGridSquares; i++) {
             gridSquare = document.createElement('div');
             gridSquare.classList.add('grid-square');
             gridSquare.style.background = 'white';
