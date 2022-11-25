@@ -96,11 +96,11 @@ slider = document.getElementById("actualRange");
 rangeOutput = document.getElementById("current-size");
 
 // Output default slider value
-rangeOutput.innerHTML = slider.value + " x " + slider.value;
+rangeOutput.textContent = slider.value + " x " + slider.value;
 
 // Update slider value each time you drag the slider handle
 slider.oninput = function() {
-    rangeOutput.innerHTML = this.value + " x " + this.value;
+    rangeOutput.textContent = this.value + " x " + this.value;
     regenerateGrid(this.value);
 }
 
